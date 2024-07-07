@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verified Partners</title>
+    <!-- Bootstrap CSS link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for refining the design */
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar-brand img {
+            height: 60px; /* Adjust height of logo */
+        }
+        .card {
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .card-text {
+            color: #6c757d;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/trusty.jpg" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Verified Partners</h1>
+
+        <!-- Company profiles using Bootstrap cards -->
+        <div class="card mb-4">
+            <div class="card-body d-flex">
+                <div class="col-md-2">
+                    <img src="./icons/Apple.jpg" alt="Company Logo" class="img-fluid">
+                </div>
+                <div class="col-md-10">
+                    <h2 class="card-title">Apple Inc.</h2>
+                    <p class="card-text">Apple Inc. is a multinational technology company that designs, develops, and sells consumer electronics, computer software, and online services. Known for its innovative hardware products like iPhone, iPad, and Mac computers, Apple also offers a wide range of software products like iOS, iPadOS, and macOS.</p>
+                    <div class="text-right">
+                        <a href="./profile.html" class="btn btn-primary">Click to Verify</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-body d-flex">
+                <div class="col-md-2">
+                    <img src="./icons/amazon.jpg" alt="Company Logo" class="img-fluid">
+                </div>
+                <div class="col-md-10">
+                    <h2 class="card-title">Amazon.com, Inc.</h2>
+                    <p class="card-text">Amazon.com, Inc. is an American multinational technology company that focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. Amazon is the world's largest online marketplace, offering a vast selection of products for sale by third-party sellers and itself.</p>
+                    <div class="text-right">
+                        <a href="./profile.html" class="btn btn-primary">Click to Verify</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Example for Microsoft Corporation -->
+        <div class="card mb-4">
+            <div class="card-body d-flex">
+                <div class="col-md-2">
+                    <img src="./icons/microsoft.jpeg" alt="Company Logo" class="img-fluid">
+                </div>
+                <div class="col-md-10">
+                    <h2 class="card-title">Microsoft Corporation</h2>
+                    <p class="card-text">Microsoft Corporation is an American multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services. Microsoft is best known for its Windows operating system, the Microsoft Office suite of productivity software, and the Xbox video game console.</p>
+                    <div class="text-right">
+                        <a href="./profile.html" class="btn btn-primary">Click to Verify</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     
+      
+    </div>
+
+    <!-- Bootstrap JS scripts (optional for certain components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
