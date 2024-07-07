@@ -38,6 +38,22 @@
             background-color: #0069d9;
             border-color: #0062cc;
         }
+
+        /* Loading spinner styles */
+        .spinner {
+            display: none;
+            width: 2rem;
+            height: 2rem;
+            border: 0.3rem solid rgba(0, 0, 0, 0.1);
+            border-top: 0.3rem solid #007bff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 1rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
@@ -78,7 +94,8 @@
                     <h2 class="card-title">Apple Inc.</h2>
                     <p class="card-text">Apple Inc. is a multinational technology company that designs, develops, and sells consumer electronics, computer software, and online services. Known for its innovative hardware products like iPhone, iPad, and Mac computers, Apple also offers a wide range of software products like iOS, iPadOS, and macOS.</p>
                     <div class="text-right">
-                        <a href="./profile.html" class="btn btn-primary">Click to Verify</a>
+                        <a href="./profile.html" class="btn btn-primary btn-verify">Click to Verify</a>
+                        <div class="spinner"></div>
                     </div>
                 </div>
             </div>
@@ -87,13 +104,14 @@
         <div class="card mb-4">
             <div class="card-body d-flex">
                 <div class="col-md-2">
-                    <img src="./icons/amazon.jpg" alt="Company Logo" class="img-fluid">
+                    <img src="./icons/amazon.png" alt="Company Logo" class="img-fluid">
                 </div>
                 <div class="col-md-10">
                     <h2 class="card-title">Amazon.com, Inc.</h2>
                     <p class="card-text">Amazon.com, Inc. is an American multinational technology company that focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. Amazon is the world's largest online marketplace, offering a vast selection of products for sale by third-party sellers and itself.</p>
                     <div class="text-right">
-                        <a href="./profile.html" class="btn btn-primary">Click to Verify</a>
+                        <a href="./profile.html" class="btn btn-primary btn-verify">Click to Verify</a>
+                        <div class="spinner"></div>
                     </div>
                 </div>
             </div>
@@ -109,13 +127,13 @@
                     <h2 class="card-title">Microsoft Corporation</h2>
                     <p class="card-text">Microsoft Corporation is an American multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services. Microsoft is best known for its Windows operating system, the Microsoft Office suite of productivity software, and the Xbox video game console.</p>
                     <div class="text-right">
-                        <a href="./profile.html" class="btn btn-primary">Click to Verify</a>
+                        <a href="./profile.html" class="btn btn-primary btn-verify">Click to Verify</a>
+                        <div class="spinner"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-     
       
     </div>
 
@@ -123,5 +141,21 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const verifyButtons = document.querySelectorAll('.btn-verify');
+            verifyButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const spinner = this.nextElementSibling;
+                    spinner.style.display = 'inline-block';
+
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 2000); // Simulate a delay of 2 seconds before redirecting
+                });
+            });
+        });
+    </script>
 </body>
 </html>
